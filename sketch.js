@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 
 var umbrella;
 var thunder,thunderImage, thunderImage2,thunderImage3,thunderImage4;
-var drop;
+
 function preload(){
   thunderImage = loadImage("1.png");
   thunderImage2 = loadImage("2.png");
@@ -21,7 +21,7 @@ function setup(){
    engine = Engine.create();
    
    world = engine.world;
-   drop  =new Drop(200,0,10);
+   
    umbrella = new Umbrella(250,480,200,200)
    
    
@@ -31,7 +31,7 @@ function draw(){
     background("black")
     Engine.update(engine);
     umbrella.display();
-    drop.display();
+    
     thunderframe();
     drawSprites();
 }   

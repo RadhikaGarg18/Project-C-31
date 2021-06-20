@@ -21,13 +21,17 @@ class Drop{
             var MaxDrops = 100;
             var drops = [];
 
-             if(pos.y > height){
-                 Matter.Body.setPosition(this.body,{x: random(0,500),y:random(0,0)})
-             }
+            
 
-            for(var i=0; i<MaxDrops; i++){
+             for(var i=0; i<MaxDrops; i++){
                 drops.push(new Drop(random(0,500), random(0,500)));
+                drops.display();
+               
             }
+            if(pos.y > height){
+                Matter.Body.setPosition(this.body,{x: random(0,500),y:random(0,0)})
+            }
+           
             
             pop()
     }

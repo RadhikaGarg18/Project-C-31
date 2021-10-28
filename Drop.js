@@ -6,7 +6,7 @@ class Drop{
             density: 0.04
         }
             
-            this.body=Bodies.circle(this.x, this.y, this.r, options);
+            this.body=Bodies.circle(x, y, r, options);
             this.x = x;
             this.y = y;
             this.r = r;
@@ -21,7 +21,7 @@ class Drop{
     }
     updateY(){
     if(this.body.position.y > height){
-        Matter.body.setPosition(this.body,{x: random(0,500),y:random(0,0)})
+        Matter.Body.setPosition(this.body,{x: random(0,500),y:random(0,500)})
     }
 }
 }
